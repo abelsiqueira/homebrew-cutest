@@ -12,10 +12,11 @@ install:
   - if [ `uname` = "Linux" ]; then brew install pkg-config; fi
   - brew update
   - brew tap homebrew/science
+  - brew tap dpo/cutest
   # Install homebrew/cutest as tap.
-  - mkdir -p $(brew --repo)/Library/Taps/travis
-  - ln -s $PWD $(brew --repo)/Library/Taps/travis/travis-testtap
-  - brew tap --repair
+  # - mkdir -p $(brew --repo)/Library/Taps/travis
+  # - ln -s $PWD $(brew --repo)/Library/Taps/travis/travis-testtap
+  # - brew tap --repair
 
 env:
   - PACKAGE=archdefs
