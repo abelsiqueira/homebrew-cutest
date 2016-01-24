@@ -33,3 +33,7 @@ script:
   #- brew audit $PACKAGE --strict  # Fails for now b/c head only.
   - brew install -v $PACKAGE $SINGLE --HEAD
   - brew test -v $PACKAGE
+
+matrix:
+  allow_failures:
+    - env: PACKAGES=cutest SINGLE=""
