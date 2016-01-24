@@ -20,12 +20,16 @@ install:
   - brew tap --repair
 
 env:
-  - PACKAGE=archdefs
-  - PACKAGE=sifdecode
-  - PACKAGE=cutest
-  - PACKAGE=mastsif
+  - PACKAGE=archdefs SINGLE="--without-single"
+  - PACKAGE=sifdecode SINGLE="--without-single"
+  - PACKAGE=cutest SINGLE="--without-single"
+  - PACKAGE=mastsif SINGLE="--without-single"
+  - PACKAGE=archdefs SINGLE=""
+  - PACKAGE=sifdecode SINGLE=""
+  - PACKAGE=cutest SINGLE=""
+  - PACKAGE=mastsif SINGLE=""
 
 script:
   #- brew audit $PACKAGE --strict  # Fails for now b/c head only.
-  - brew install -v $PACKAGE --HEAD
+  - brew install -v $PACKAGE $SINGLE --HEAD
   - brew test -v $PACKAGE
