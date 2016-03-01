@@ -74,7 +74,7 @@ class Cutest < Formula
       all_load = "-Wl,-all_load"
       noall_load = "-Wl,-noall_load"
       extra = ["-Wl,-undefined", "-Wl,dynamic_lookup",
-               "-Wl,headerpad_max_install_names"]
+               "-headerpad_max_install_names"]
     else
       so = "so"
       all_load = "-Wl,-whole-archive"
