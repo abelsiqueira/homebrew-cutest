@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev libgsl0-dev
 echo -ne '\n' | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
 
-gem install test-unit-minitest
+gem install test-unit minitest
 
 # Symlink GCC to avoid installing Homebrew GCC.
 gccver=$(gcc -dumpversion |cut -d. -f1,2)
