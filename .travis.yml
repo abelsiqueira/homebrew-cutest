@@ -31,4 +31,5 @@ env:
 script:
   #- brew audit $PACKAGE --strict  # Fails for now b/c head only.
   - brew install -v $PACKAGE
+  - gem install minitest
   - brew test -v $PACKAGE
